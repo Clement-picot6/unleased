@@ -10,9 +10,11 @@
 <body>
     <div class="app">
         <div id="map"></div>
-        <div class="level">
-            <img src="img/scout_level.svg" alt="">
-            <div class="progress_bar">
+        <div class="nav_top">
+            <div class="level">
+                <img src="img/scout_level.svg" alt="">
+                <div class="progress_bar">
+                </div>
             </div>
         </div>
         <div class="info_white">i</div>
@@ -21,8 +23,8 @@
         </div>
         <nav class="tapbar">
             <ul>
-                <li><a href="#"><img src="img/galerie.svg" alt="">GALERIE</a></li>
                 <li><a href="#"><img src="img/appareil.svg" alt="">APPAREIL</a></li>
+                <li><a href="#"><img src="img/galerie.svg" alt="">GALERIE</a></li>
                 <li class="nav_active"><a href="#"><img src="img/carte.svg" alt="">CARTE</a></li>
                 <li><a href="#"><img src="img/profil.svg" alt="">PROFIL</a></li>
             </ul>
@@ -31,10 +33,10 @@
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script>
-
+        
         var info = document.querySelector(".info_white");
         var hidden = document.querySelector(".info_hidden");
-
+        
         info.addEventListener('click', function(){
             if (hidden.style.display === "block") {
                 hidden.style.display =  "none";
@@ -42,7 +44,7 @@
                 hidden.style.display = "block";
             }
         });
-
+        
     </script>
     <script>
         function initMap() {
@@ -256,11 +258,17 @@
             ],
             {name: 'Styled Map'});
             
+            
+            var hetic = {lat: 48.8518077,lng:2.4174912};
+            
+            var bastille = {lat: 48.8527788,lng: 2.3671476}
+            
+            
             // Create a map object, and include the MapTypeId to add
             // to the map type control.
             var map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: 46.1445297, lng: -2.4348073},
-                zoom: 6,
+                center: hetic,
+                zoom: 11,
                 disableDefaultUI: true,
                 mapTypeControlOptions: {
                     mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
@@ -271,6 +279,72 @@
             //Associate the styled map with the MapTypeId and set it to display.
             map.mapTypes.set('styled_map', styledMapType);
             map.setMapTypeId('styled_map');
+            
+            
+            var icons = {
+                perso: {
+                    icon: 'img/icon.png'
+                }
+            };
+            
+            
+            var features = [
+            {
+                position: new google.maps.LatLng(hetic.lat,hetic.lng),
+                type: 'perso',
+                image: 'hetic.png',
+                name: 'Hetic',
+                location: 'Montreuil',
+                description: 'Meilleure école de web de france d\'après une étude du figaro réalisée en 2015. On y retrouve de grands spécimens du code français.',
+                xp: '+100px'
+            },
+            {
+                position: new google.maps.LatLng(bastille.lat,bastille.lng),
+                type: 'perso',
+                image: 'bastille.png',
+                name: 'Bastille',
+                location: 'Paris 11e',
+                description: 'Every large design company whether it’s a multi-national branding corporation or a regular down at heel tatty magazine publisher needs to fill holes in the workforce.',
+                xp: '+80xp'
+            }
+            ];
+            
+            
+            // Create markers.
+            features.forEach(function(feature) {
+                var contentString = '<div class="popup">'+
+                    '<div class="left">'+
+                        '<img src="img/'+feature.image+'" alt="">'+
+                    '</div>'+
+                    '<div class="right">'+
+                        '<div class="container">'+
+                            '<h2>'+feature.name+'</h2>'+
+                            '<h3><img src="img/icon_black.png" alt=""> '+feature.location+'</h3>'+
+                            '<p>'+feature.description+'</p>'+
+                        '</div>'+
+                    '</div>'+
+                    '<div class="bottom">'+
+                        '<p>'+feature.xp+'</p>'+
+                        '<a href="">GO</a>'+
+                    '</div>'+
+                '</div>';
+                
+                var infowindow = new google.maps.InfoWindow({
+                    content: contentString
+                });
+                
+                var marker = new google.maps.Marker({
+                    position: feature.position,
+                    icon: icons[feature.type].icon,
+                    map: map
+                });
+                
+                marker.addListener('click', function() {
+                    infowindow.open(map, marker);
+                });
+            });
+            
+            
         }
     </script>
     <script async defer
