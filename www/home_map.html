@@ -13,12 +13,11 @@
         <div class="level">
             <img src="img/scout_level.svg" alt="">
             <div class="progress_bar">
-                <div>40%</div>
             </div>
         </div>
         <div class="info_white">i</div>
         <div class="info_hidden">
-            <p><div class="info_purple">i</div>Cette maps contient 4 lieux pour les scouts. Si tu souhaites vraiment faire partie de la communauté nous te conseillons de nous suivres sur les réseaux.</p>
+            <div class="info_purple">i</div><p>Cette carte contient 4 lieux pour les scouts. Si tu souhaites vraiment faire partie de la communauté nous te conseillons de nous suivre sur les réseaux.</p>
         </div>
         <nav class="tapbar">
             <ul>
@@ -31,6 +30,20 @@
     </div>
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
+    <script>
+
+        var info = document.querySelector(".info_white");
+        var hidden = document.querySelector(".info_hidden");
+
+        info.addEventListener('click', function(){
+            if (hidden.style.display === "block") {
+                hidden.style.display =  "none";
+            } else {
+                hidden.style.display = "block";
+            }
+        });
+
+    </script>
     <script>
         function initMap() {
             

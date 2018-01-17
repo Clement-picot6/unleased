@@ -23,7 +23,7 @@
 
 @font-face {
     font-family: Avenir;
-    src: url(../font/AvenirLTStd-Medium.otf);
+    src: url(../font/avenir/AvenirLTStd-Medium.otf);
 }
 
 
@@ -175,16 +175,11 @@ svg {
     font-family: Avenir;
 }
 
-.progress_bar div {
-    width: 40px;
-    height: 12px;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    background-color: darkgreen;
-}
-
 .info_white {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 20px;
     right: 20px;
     width: 20px;
@@ -200,20 +195,37 @@ svg {
 
 .info_hidden {
     position: absolute;
+    display: none;
+    top: 70px;
     width: 90%;
     height: 20vh;
     background-color: white;
+    border-radius: 2px;
 }
 
 .info_purple {
     position: relative;
-    width: 20px;
-    height: 20px;
+    display: inline-block;
+    bottom: 56px;
+    padding-top: 1px;
+    left: 20px;
+    width: 15px;
+    height: 15px;
     border-radius: 25px;
     border: 2px solid #301E5C;
     font-family: Avenir;
     font-weight: bold;
     color: #301E5C;
     text-align: center;
-    font-size: 12px;
+    font-size: 8px;
+}
+
+.info_hidden p {
+    display: inline-block;
+    position: relative;
+    left: 30px;
+    top: 10px;
+    width: 80%;
+    font-size: 13px;
+    font-family: Avenir;
 }
