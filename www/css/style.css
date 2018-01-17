@@ -46,17 +46,37 @@ body {
     height: 100vh;
 }
 
+.logo_opacity {
+    position: absolute;
+    width: 100%;
+    top: -100px;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.img_loading {
+    z-index: 5;
+}
+
 .app {
     display: flex;
     height: 100vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    z-index: 5;
 }
 
 .app img {
     width: 35%;
-    
+}
+
+.app .sous_titre {
+    color: white;
+    font-size: 12px;
+    font-family: Avenir;
+    font-weight: lighter;
+    margin-top: 5px;
 }
 
 .app h2, h4 {
@@ -80,19 +100,18 @@ body {
 
 .app h4.loading3 {
     width: 60%;
+    z-index: 10;
 }
 
 .app h4.loading4 {
     width: 70%;
 }   
 
-.app h4.loading5 {
-    width: 70%;
-}   
-
 
 .bulletpoint {
-    margin-top: 10px;
+    position: absolute;
+    bottom: 50px;
+    z-index: 10;
 }
 
 .bullet {
@@ -105,6 +124,12 @@ body {
 
 .active {
     background-color: #fff;
+}
+
+.round {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
 }
 
 .tapbar {
