@@ -797,6 +797,7 @@ li {
     display: flex;
     width: 80%;
     margin: 0 auto;
+    margin-top: 10px;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center;
@@ -822,5 +823,5 @@ li {
     font-size: 14px;
     padding: 10px 100px;
     border-radius: 4px;
-    margin: 10px 0 20px 0;
+    margin: 30px 0 20px 0;
 }
