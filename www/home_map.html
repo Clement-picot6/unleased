@@ -111,7 +111,7 @@
         <nav class="tapbar">
             <ul>
                 <li><a href="#"><img src="img/appareil.svg" alt="">APPAREIL</a></li>
-                <li><a href="#"><img src="img/galerie.svg" alt="">GALERIE</a></li>
+                <li><a href="galerie.html"><img src="img/galerie.svg" alt="">GALERIE</a></li>
                 <li class="nav_active"><a href="#"><img src="img/carte.svg" alt="">CARTE</a></li>
                 <li><a href="#"><img src="img/profil.svg" alt="">PROFIL</a></li>
             </ul>
@@ -370,7 +370,6 @@
             
             var bastille = {lat: 48.8527788,lng: 2.3671476}
             
-            
             // Create a map object, and include the MapTypeId to add
             // to the map type control.
             var map = new google.maps.Map(document.getElementById('map'), {
@@ -386,6 +385,7 @@
             //Associate the styled map with the MapTypeId and set it to display.
             map.mapTypes.set('styled_map', styledMapType);
             map.setMapTypeId('styled_map');
+        
             
             
             var icons = {
@@ -440,6 +440,16 @@
                     content: contentString
                 });
 
+                google.maps.event.addListener(infowindow, 'domready', function() {
+                var iwOuter = $('.gm-style-iw');
+                var iwCloseBtn = iwOuter.next();
+                var iwBackground = iwOuter.prev();
+                iwBackground.children(':nth-child(4)').css({'display' : 'none'});
+                iwBackground.children(':nth-child(2)').css({'display' : 'none'});
+                iwBackground.children(':nth-child(3)').css({'display': 'none'});
+                iwBackground.children(':nth-child(3)').css({'display': 'none'});
+                iwCloseBtn.css({opacity: '1', right: '38px', top: '9px'});
+            });
                 
                 var marker = new google.maps.Marker({
                     position: feature.position,
@@ -447,11 +457,12 @@
                     map: map
                 });
                 
+
+                
                 marker.addListener('click', function() {
                     infowindow.open(map, marker);
                 });
             });
-            
         }
     </script>
     <script async defer

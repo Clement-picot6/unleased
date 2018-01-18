@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    
+    <title>Hello World</title>
+</head>
+<body>
+    <div class="app">
+        <div id="map"></div>
+        <div class="nav_top">
+            <div class="level">
+                <img src="img/scout_level.svg" alt="">
+                <div class="progress_bar">
+                    <div></div>
+                </div>
+            </div>
+            
+            <div class="choice">
+                <div class="liste">Liste</div>
+                <div class="plan choice_active">Plan</div>
+            </div>
+        </div>
+        
+        <div class="galerie_container">
+            
+            <div class="img-galerie-container">
+                <div class="img-galerie img-galerie-mt" style="background-image:url(img/chateau-thumbnail.png); background-repeat:no-repeat; background-position: center center; background-size: cover">
+                    <div class="by_who_galerie"><p>By Unleased</p></div>
+                </div>
+                
+                <div class="img-galerie img-galerie-mt" style="background-image:url(img/ceinture-thumbnail.png); background-repeat:no-repeat; background-position: center center; background-size: cover">
+                    <div class="by_who_galerie"><p>By Unleased</p></div>
+                </div>
+                
+                <div class="img-galerie" style="background-image:url(img/usine-thumbnail.png); background-repeat:no-repeat; background-position: center center; background-size: cover">
+                    <div class="by_who_galerie"><p>By Unleased</p></div>
+                </div>
+                
+                <div class="img-galerie" style="background-image:url(img/egout-thumbnail.png); background-repeat:no-repeat; background-position: center center; background-size: cover">
+                    <div class="by_who_galerie"><p>By Unleased</p></div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <nav class="tapbar">
+            <ul>
+                <li><a href="#"><img src="img/appareil.svg" alt="">APPAREIL</a></li>
+                <li class="nav_active"><a href="#"><img src="img/galerie.svg" alt="">GALERIE</a></li>
+                <li><a href="home_map.html"><img src="img/carte.svg" alt="">CARTE</a></li>
+                <li><a href="#"><img src="img/profil.svg" alt="">PROFIL</a></li>
+            </ul>
+        </nav>
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
