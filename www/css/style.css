@@ -93,11 +93,11 @@ body {
 
 .app {
     display: flex;
-    height: 100vh;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     z-index: 5;
+    height: 100vh;
     overflow-x: hidden;
     overflow-y: scroll;
 }
@@ -525,7 +525,7 @@ li {
 
 /* GALERIE */
 
-.galerie_container {
+.container_bg{
     width: 100%;
     min-height: 120vh;
     background-color: #140D25;
@@ -564,4 +564,198 @@ li {
 
 .img-galerie-mt {
     margin-top: 130px;
+}
+
+
+
+
+
+
+/* PROFIL */
+
+.app_profil {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 5;
+    overflow:hidden;
+}
+
+
+.profil_infos {
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    color: white;
+    font-family: AvenirLight, sans-serif;
+    margin-top: 20px;
+}
+
+.progress_bar_profil {
+    display: inline-block;
+    width: 200px;
+    height: 17px;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    font-size: 10px;
+    text-align: center;
+    bottom: 15px;
+    left: 5px;
+    font-family: 'AvenirMedium', sans-serif;
+}
+
+.progress_bar_profil div {
+    width: 16px;
+    height: 17px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #22E69E;
+}
+
+.progress_bar_profil p {
+    position: relative;
+    bottom: 15px;
+    color: #22E69E;
+}
+
+.parrainage_top {
+    width: 90%;
+    background-color: #ED4A59;
+    display: flex;
+    margin: 0 auto;
+    padding: 15px 0;
+    border-radius: 3px;
+}
+
+.parrainage_top .info {
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    margin: 5px 15px 0 10px;
+    border: 1px solid white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: AvenirLight, sans-serif;
+}
+
+.parrainage_top .info span {
+    position: relative;
+    top: 2px;
+}
+
+.parrainage_top p {
+    display: inline-block;
+    color: white;
+    font-family: AvenirLight, sans-serif;
+    font-size: 13px;
+    padding-right: 15px;
+}
+
+
+.connexion {
+    width: 90%;
+}
+
+.activation {
+    background-color: white;
+    width: 90%;
+    display: flex;
+    position: absolute;
+    top: 260px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    border-radius: 4px;
+}
+
+.activation label {
+    text-align: left;
+    padding: 0 0 10px 20px;
+    font-family: AvenirMedium, sans-serif;
+    color: #200440;
+    font-size: 13px;
+}
+.activation a {
+    display: inline-block;
+    background-color: #35206E;
+    color: white;
+    margin: 0 auto;
+    text-decoration: none;
+    font-family: AvenirMedium, sans-serif;
+    font-size: 14px;
+    padding: 20px 45px;
+}
+
+.activation span {
+    display: inline-block;
+    background-color: #35206E;
+    color: white;
+    text-decoration: none;
+    font-family: AvenirMedium, sans-serif;
+    font-size: 14px;
+    padding:0 0 0 60px;
+}
+
+
+.connexion {
+    background-color: white;
+    width: 90%;
+    display: flex;
+    position: absolute;
+    bottom: 75px;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    border-radius: 4px;
+}
+
+.connexion p {
+    font-size: 13px;
+    color: #200440;
+    font-family: AvenirMedium, sans-serif;
+    padding: 5px 0 0 15px;
+}
+
+.connexion label {
+    text-align: left;
+    padding: 0 0 10px 20px;
+    font-family: AvenirMedium, sans-serif;
+    color: #200440;
+    font-size: 13px;
+}
+.connexion a {
+    display: inline-block;
+    background-color: #35206E;
+    color: white;
+    margin: 0 auto;
+    text-decoration: none;
+    font-family: AvenirMedium, sans-serif;
+    font-size: 14px;
+    padding: 20px 50px;
+    margin-top: 10px;
+}
+
+.connexion span {
+    display: inline-block;
+    background-color: #35206E;
+    color: white;
+    text-decoration: none;
+    font-family: AvenirMedium, sans-serif;
+    font-size: 14px;
+    margin:0 0 0 90px;
+}
+
+.connexion input[type="email"] {
+    position: relative;
+    top: 20px;
+    right: 30px;
+}
+
+.connexion input[type="password"] {
+    position: relative;
+    top: 0px;
+    left: 200px;
 }
