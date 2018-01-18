@@ -209,13 +209,14 @@ li {
 }
 
 .nav_top {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
     width: 100%;
     height: 50px;
     background-color: rgba(0,0,0,0.5);
+    z-index: 6;
 }
 
 .level {
@@ -329,6 +330,18 @@ li {
     font-weight: lighter;
 }
 
+.right p {
+    font-size: 10px;
+}
+
+.right p:last-child {
+    float: left;
+    color: #362072;
+    font-weight: bolder;
+    font-family: 'AvenirMedium', sans-serif;
+    font-size: 10px;
+}
+
 .right .container {
     display: flex;
     justify-content: center;
@@ -338,30 +351,23 @@ li {
 .bottom {
     display: inline-block;
     width: 100%;
-}
-
-.bottom p {
-    float: left;
-    color: #362072;
-    font-weight: bolder;
-    font-family: 'AvenirMedium', sans-serif;
-    font-size: 10px;
+    margin-top: 10px;
 }
 
 .bottom a {
-    float: right;
-    padding: 7px 25px;
-    background-color: #D8D8D8;
+    padding: 15px 50%;
+    color: #fff;
     border-radius: 3px;
-    color: #362072;
-    font-size: 10px;
+    background-color: #362072;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
     font-weight: bolder;
-    font-family: 'AvenirMedium', sans-serif;
+    font-family: AvenirLight, sans-serif;
     text-decoration: none;
     text-transform: uppercase;
 }
-
-
 
 #map {
     display: block;
@@ -372,13 +378,15 @@ li {
 /* CARD ACCUEIL */
 
 .place_container {
-    height: 100vh;
     width: 100%;
+    min-height: 130vh;
     background-color: #140D25;
-    padding-top: 80px;
     display: none;
 }
 
+.place:first-child {
+    margin-top: 160px;
+}
 
 .place {
     color: white;
@@ -392,6 +400,10 @@ li {
     box-shadow: 0px 2px 7px 3px rgba(0,0,0,0.58);
     margin-bottom: 15px;
     display: none;
+}
+
+.place:last-child {
+    filter: blur(5px);
 }
 
 .card-top {
@@ -461,4 +473,42 @@ li {
     bottom: 15px;
     right: 25px;
     font-size: 11px;
+}
+
+
+.parrainage_bottom {
+    width: 85%;
+    background-color: #ED4A59;
+    display: flex;
+    margin: 0 auto;
+    padding: 15px 0;
+    border-radius: 3px;
+    margin-bottom: 70px;
+}
+
+.parrainage_bottom .info {
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    margin: 5px 15px 0 10px;
+    border: 1px solid white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: AvenirLight, sans-serif;
+}
+
+.parrainage_bottom .info span {
+    position: relative;
+    top: 2px;
+}
+
+.parrainage_bottom p {
+    display: inline-block;
+    color: white;
+    font-family: AvenirLight, sans-serif;
+    font-size: 13px;
+    padding-right: 15px;
 }
