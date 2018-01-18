@@ -592,6 +592,11 @@ li {
     margin-top: 20px;
 }
 
+.profil_infos p:nth-child(3) {
+    color: #22E69E;
+    font-size: 12px;
+}
+
 .progress_bar_profil {
     display: inline-block;
     width: 200px;
@@ -824,4 +829,89 @@ li {
     padding: 10px 100px;
     border-radius: 4px;
     margin: 30px 0 20px 0;
+}
+
+
+
+
+
+.code_activation {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    background-color: #fff;
+    color: #200440;
+    font-family: AvenirMedium, sans-serif;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 350px;
+    padding: 20px 0;
+    border-radius: 4px;
+}
+
+.code_activation label {
+    padding-left: 15px;
+    font-size: 15px;
+}
+
+.code_activation .container_code {
+    color: grey;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 15px;
+}
+
+.code_activation p:nth-child(1){
+    float: left;
+}
+
+.code_activation p:nth-child(3) {
+    float: right;
+}
+
+
+.added_places {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    background-color: #fff;
+    color: #200440;
+    font-family: AvenirMedium, sans-serif;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 130px;
+    padding: 20px 0;
+    border-radius: 4px;
+}
+
+.added_places .container_lieu {
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.added_places label {
+    padding-left: 15px;
+    font-size: 15px;
+}
+
+.added_places .container_lieu p {
+    font-size: 12px;
+    color: grey;
+    text-align: center;
+}
+
+.added_places .container_lieu a {
+    display: inline-block;
+    background-color: #35206E;
+    color: white;
+    margin: 0 auto;
+    text-decoration: none;
+    font-family: AvenirLight, sans-serif;
+    font-size: 14px;
+    padding: 10px 100px;
+    border-radius: 4px;
+    margin: 50px 0 10px 0;
 }
